@@ -1,10 +1,9 @@
-/* Write a program to Print number pyramid. 
-    1 
-   121 
-  12321 
- 1234321 
-123454321  */
-
+/*  Write a program to Print character pyramid. 
+    A 
+   ABA 
+  ABCBA 
+ ABCDCBA 
+ABCDEDCBA*/
 
 #include <stdio.h>
 
@@ -18,19 +17,19 @@ int main() {
     // loop for each line
     for (int i = 1; i <= rows; i++) {
         
-        // print spaces first (to center numbers)
+        // print spaces first (to center letters)
         for (int j = 1; j <= rows - i; j++) {
             printf(" ");
         }
 
-        // print increasing numbers (1 to i)
+        // print increasing letters (A to current row letter)
         for (int k = 1; k <= i; k++) {
-            printf("%d", k);
+            printf("%c", 'A' + k - 1);
         }
 
-        // print decreasing numbers (i-1 down to 1)
+        // print decreasing letters (back down to A)
         for (int k = i - 1; k >= 1; k--) {
-            printf("%d", k);
+            printf("%c", 'A' + k - 1);
         }
 
         // go to next line

@@ -1,21 +1,20 @@
-/*  Write a program to Print star pyramid. 
-    * 
-   *** 
-  ***** 
+/* Write a program to Print reverse pyramid. 
+********* 
  ******* 
-*********            */
+  ***** 
+   *** 
+    *     */
 
-#include <stdio.h>
+    #include <stdio.h>
 
 int main() {
-    int rows;  
+int rows;  
 
     // ask user for number of rows
     printf("Enter number of rows: ");
     scanf("%d", &rows);
-
     // loop for each line
-    for (int i = 1; i <= rows; i++) {
+    for (int i = rows; i >= 1; i--) {
         
         // print spaces first
         for (int j = 1; j <= rows - i; j++) {
@@ -33,4 +32,3 @@ int main() {
 
     return 0;
 }
-
